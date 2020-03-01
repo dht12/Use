@@ -1,0 +1,21 @@
+ public static void main(String[] args) {
+	 HashMap<String,Integer> map=new HashMap<String, Integer>();
+		map.put("1", 1);
+		System.out.println("map的长度"+map.entrySet().size());//1
+		//重复元素不记入map键值对中
+		map.put("1", 2);
+		map.put("2", 3);
+		System.out.println("map的长度"+map.entrySet().size());//2
+		//两种map输出的方法
+		
+		for(Entry<String, Integer> entry:map.entrySet()){
+			System.out.println(entry.getKey());
+			
+		}
+
+	    Iterator<Entry<String, Integer>> i=map.entrySet().iterator();
+	    while(i.hasNext()){
+	    	System.out.println("two"+i.next().getKey());
+	    }
+		
+}
